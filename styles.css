@@ -59,7 +59,7 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
     position: relative;
-    top: -5px;  /* Slightly move the hamburger icon up */
+    top: -10px;  /* Slightly move the hamburger icon up */
     transform: translateY(-5px); 
 }
 
