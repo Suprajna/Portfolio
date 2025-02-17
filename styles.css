@@ -14,7 +14,7 @@ body {
 
 /* Header & Navigation */
 header {
-  background-color: #3f4042;
+  background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -25,42 +25,36 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
-
-    padding: 10px 20px;  /* Adds space around the entire nav container */
-
 }
 
 .nav-menu {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  
+  display: flex;
 }
+
 .nav-menu li {
-  display: inline-block;
-  margin-right: 20px;
+  margin: 0 15px;
 }
 
 .nav-menu li a {
+  color: #fff;
   text-decoration: none;
-  color:white;
-  
+  font-size: 1rem;
 }
 
 .nav-menu li a:hover {
-  text-decoration:underline;
+  text-decoration: underline;
   color:chartreuse
 }
 
 /* Hamburger menu (hidden on desktop) */
 .hamburger {
- 
-  display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: relative;
-    top: -5px;  /* Slightly move the hamburger icon up */
-    transform: translateY(-5px); 
+  display: none; /* Hide by default */
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color:black;
 }
 
 /* About Me Section */
@@ -68,7 +62,6 @@ nav {
   padding: 40px 20px;
   text-align: center;
   background-color: #fff;
-  color: #333;
 }
 
 #about h2 {
@@ -82,11 +75,11 @@ nav {
   margin: auto;
 }
 
+/* Skills Section */
 #skills {
   padding: 40px 20px;
   background-color: #fff;
   text-align: center;
-  color: #333;
 }
 
 #skills h2 {
@@ -218,18 +211,20 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {
-      flex-direction: column;
-      display: none;
-      width: 100%;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      text-align: center;
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu-active {
-      display: block;
+      display: flex;
   }
 
   .nav-menu li {
@@ -237,10 +232,11 @@ footer {
   }
 
   .hamburger {
-      display: block;
-      position: absolute;
-      right: 20px;
-      top: 20px;
+    display: block; /* Show hamburger icon on mobile */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
   }
 
   .projects-container {
@@ -274,20 +270,4 @@ footer {
 .modal img {
   max-width: 80%;
   max-height: 80%;
-}
-/* Ensure sections are visible */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;  /* Show the hamburger icon */
-  }
-
-  /* Optionally, hide the nav menu by default on mobile */
-  .nav-menu {
-    display: none;
-  }
-
-  /* Show the nav menu when the hamburger icon is clicked */
-  .nav-menu-active {
-    display: block;
-  }
 }
