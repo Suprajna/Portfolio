@@ -1,6 +1,7 @@
 // Function to toggle the navigation menu
 function toggleMenu() {
     const navMenu = document.querySelector('.nav-menu');
+    console.log("Toggling menu visibility");
     navMenu.classList.toggle('nav-menu-active'); // Add or remove the 'nav-menu-active' class
 }
 
